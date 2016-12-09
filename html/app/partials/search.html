@@ -1,0 +1,44 @@
+<div class="container-fluid">
+	<div class="col-md-8">
+		<h3 class="row">Suche nach {{ searchtext }} ({{ tools.length }} Ergebnise)</h3>
+		
+		<div class="row" ng-repeat="dto in tools" style="margin-bottom: 30px">
+			<div class="col-md-1">
+				<img src="{{ dto.tool.imgs[0] }}" width="64px" height="64px" class="row" />
+			</div>
+			<div class="col-md-8">
+				<a href="#!/tooldetail?id={{ dto.tool.id }}">{{ dto.tool.name }}</a><br />
+				<span >von {{ dto.sharer.firstname }} {{ dto.sharer.lastname }} aus {{ dto.sharer.city }}</span><br />
+				
+				<span ng-show="dto.tool.availiable" style="color:green;">Verfügbar</span>
+				<span ng-hide="dto.tool.availiable" style="color:red">Nicht Verfügbar</span>
+
+			</div>
+		</div>
+	
+	</div>
+	<div class="col-md-4">
+		<h3 class="row">Erweiterte Einstellungen</h3>
+		
+		<div class="row" style="margin-bottom: 8px">
+			Umkreis:
+			<select ng-model="searchFilter.distance" ng-change="update()">
+			  <option ng-repeat="d in distances" ng-value="d">{{ d }} km</option>
+			</select>
+		</div>
+			
+		<div class="row" style="margin-bottom: 8px">
+			Verfügbarkeit:
+			<select ng-model="searchFilter.availiability" ng-change="update()">
+			  <option ng-repeat="a in availiabilities" ng-value="a">{{ a }}</option>
+			</select>
+		</div>	
+			
+		<div class="row" style="margin-bottom: 8px">
+			Marke:
+			<select ng-model="searchFilter.brand" ng-change="update()">
+			  <option ng-repeat="b in brands" ng-value="b">{{ b }}</option>
+			</select>
+		</div>
+	</div>
+</div>

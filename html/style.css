@@ -1,0 +1,17 @@
+nav {
+	background-color: #aa5800;
+}
+
+nav a {
+	color: white;
+}
+
+.searchbar {
+    margin-top: 10px;
+    margin-left: 93px;
+    width: 480px;
+}
+
+#EVERYTHING {
+	margin-top: 50px;
+}

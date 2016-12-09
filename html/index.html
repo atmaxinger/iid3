@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ToolShare</title>
+		<meta charset="utf-8" />
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+		<script src="https://code.angularjs.org/1.6.0-rc.2/angular-route.min.js"></script>
+		
+		<script src="app/app.js"></script>
+		
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body ng-app="main">
+		<nav class="navbar navbar-fixed-top" ng-controller="navbarController">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">ToolShare</a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<!-- <li>
+							<a href="#" class="nav_link">
+							<span class="glyphicon glyphicon-user"></span> Your profile
+							</a>
+						</li>--> 
+						
+						<li ng-show="authstatus.user == null">
+							<a href="#!/login" class="nav_link">
+							<span class="glyphicon glyphicon-log-out"></span> Anmelden
+							</a>
+						</li>
+						
+						<li ng-show="authstatus.user == null">
+							<a href="#" class="nav_link">
+							<span class="glyphicon glyphicon-log-out"></span> Registrieren
+							</a>
+						</li>
+						
+						<li ng-show="authstatus.user != null">
+							<a ng-click="logOut()" class="nav_link">
+							<span class="glyphicon glyphicon-log-out"></span> {{ authstatus.user.username }} Abmelden
+							</a>
+						</li>
+					</ul>
+					<div class="input-group nav navbar-nav navbar-left searchbar">
+						<input type="text" class="search-query form-control" placeholder="Search for..." style="background-color:white" ng-model="searchtext" />
+						<span class="input-group-btn">
+						<button class="btn btn-primary" type="button" ng-click="search(searchtext)">
+						<span class="glyphicon glyphicon-search"></span>
+						</button>
+						</span>
+					</div>
+					Du bist in Oberndorf
+					</form>
+				</div>
+			</div>
+			</div>
+		</nav>
+		
+		<div id="EVERYTHING" ng-view></div>
+	</body>
+</html>
