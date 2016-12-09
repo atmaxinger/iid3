@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ToolShare Startseite</title>
+		<meta charset="utf-8" />
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="style.css" />
+				<script src="script.js"></script>
+
+	</head>
+	<body onload="changeNavbar()">
+		<nav class="navbar navbar-fixed-top">
+			<div class="container-fluid">			
+				<div class="navbar-header">
+					<a class="navbar-brand" href="javascript:openLink('index.html')">ToolShare</a>
+				</div>	
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li id="navlogin">
+							<a href="javascript:open_login();" class="nav_link">
+							<span class="glyphicon glyphicon-log-in"></span> Anmelden
+							</a>
+						</li>
+						
+						<li id="navsignup">
+							<a href="javascript:open_signup();" class="nav_link">
+							<span class="glyphicon glyphicon-register"></span> Registrieren
+							</a>
+						</li>
+					
+						<li id="navportal" style="display:none">
+							<a href="javascript:open_portal();" class="nav_link">
+							<span class="glyphicon glyphicon-user"></span> Benutzerportal
+							</a>
+						</li>					
+						<li id="navlogout" style="display:none">
+							<a href="javascript:logout()" class="nav_link">
+							<span class="glyphicon glyphicon-log-out"></span> Abmelden
+							</a>
+						</li>
+						
+					</ul>
+					<div class="input-group nav navbar-nav navbar-left searchbar">
+						<form class="navbar-form" role="search">
+								<input type="text" class="search-query form-control" placeholder="Suchen nach..." style="background-color:white" />
+								<span class="input-group-btn">
+									<button class="btn btn-primary" type="button" onclick="javascript:openLink('search.html')">
+										<span class="glyphicon glyphicon-search"></span>
+									</button>
+								</span>
+						</form>		
+					</div>									
+				</div>
+			</div>
+		</nav>
+
+		<div id="content" class="container">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+			<h3>Gerät bearbeiten</h3>
+				<form>
+					<div class="form-group">
+						<label for="inputname">Name des Geräts</label>
+						<input type="text" class="form-control" id="inputname" placeholder="Kärcher X5000" value="Bosch Bohrmaschine BOHRTEST123">
+					</div>			
+					<div class="form-group">
+						<label for="inputname">Bild</label>
+						<input type="file" class="form-control" id="inputname" >
+					</div>	
+		
+					<div class="form-group">
+						<label for="desc">Beschreibung</label>
+						<textarea class="form-control" id="desc">Hallo! Ich vermiete mein Bosch Bohrmaschine, da ich sie zur Zeit nicht brauche. Bei Interesse einfach melden!</textarea>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Zubehör</label>
+						<textarea class="form-control" placeholder="Nachricht eingeben">
+	* Bohrer in den Stufen 5-15mm
+	* Stemmmeißel
+	* Verlängerungen bis 15 cm</textarea>
+					</div>
+					
+					<h3>Technische Daten</h3>
+					<table class="table">
+						<tr>
+							<th>Eigenschaft</th>
+							<th>Wert</th>
+						</tr>
+						<tr>
+							<td>
+								<select class="form-control">
+									<option selected>Marke</option>
+									<option>Baujahr</option>
+									<option>Stromversorgung</option>
+									<option>Inhalt</option>
+									<option>Gewicht</option>
+									<option>Leistung</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" class="form-control" id="inputname" placeholder="Kärcher" value="Bosch">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<select class="form-control">
+									<option>Marke</option>
+									<option selected>Baujahr</option>
+									<option>Stromversorgung</option>
+									<option>Inhalt</option>
+									<option>Gewicht</option>
+									<option>Leistung</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" class="form-control" id="inputname" value="2013">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<select class="form-control">
+									<option>Marke</option>
+									<option>Baujahr</option>
+									<option selected>Stromversorgung</option>
+									<option>Inhalt</option>
+									<option>Gewicht</option>
+									<option>Leistung</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" class="form-control" id="inputname" value="Akku">
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2"><a href="">Weitere Eigenschaft hinzufügen...</a></td>
+						</tr>
+					</table>
+
+					<button type="button" class="btn btn-default" onclick="openLink('portal.html')">Speichern</button>
+					<button type="button" class="btn btn-default" onclick="openLink('portal.html')">Abbrechen</button>
+				</form>
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+		
+		<footer class="footer">
+			<div class="container">
+			hi
+			</div>
+		</footer>
+	</body>
+</html>

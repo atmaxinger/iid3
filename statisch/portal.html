@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ToolShare Startseite</title>
+		<meta charset="utf-8" />
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="style.css" />
+		
+		<script src="script.js"></script>
+	</head>
+	<body onload="changeNavbar()">
+		<nav class="navbar navbar-fixed-top">
+			<div class="container-fluid">			
+				<div class="navbar-header">
+					<a class="navbar-brand" href="javascript:openLink('index.html')">ToolShare</a>
+				</div>	
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li id="navlogin">
+							<a href="javascript:open_login();" class="nav_link">
+							<span class="glyphicon glyphicon-log-in"></span> Anmelden
+							</a>
+						</li>
+						
+						<li id="navsignup">
+							<a href="javascript:open_signup();" class="nav_link">
+							<span class="glyphicon glyphicon-register"></span> Registrieren
+							</a>
+						</li>
+					
+						<li id="navportal" style="display:none">
+							<a href="javascript:open_portal();" class="nav_link">
+							<span class="glyphicon glyphicon-user"></span> Benutzerportal
+							</a>
+						</li>					
+						<li id="navlogout" style="display:none">
+							<a href="javascript:logout()" class="nav_link">
+							<span class="glyphicon glyphicon-log-out"></span> Abmelden
+							</a>
+						</li>
+						
+					</ul>
+					<div class="input-group nav navbar-nav navbar-left searchbar">
+						<form class="navbar-form" role="search">
+								<input type="text" class="search-query form-control" placeholder="Suchen nach..." style="background-color:white" />
+								<span class="input-group-btn">
+									<button class="btn btn-primary" type="button" onclick="javascript:openLink('search.html')">
+										<span class="glyphicon glyphicon-search"></span>
+									</button>
+								</span>
+						</form>		
+					</div>									
+				</div>
+			</div>
+		</nav>
+
+		<div id="content" class="container">
+			<h3>Benutzerportal für Tim Taylor</h3>
+			
+			<h4>Meine Vormerkungen</h4>
+			<table class="table">
+				<tr>
+					<th>Name</th>
+					<th>Von</th>
+					<th>Verfügbarkeit</th>
+					<th>Optionen</th>
+				</tr>
+				<tr>
+					<td><a href="javascript:openLink('detail_hilti.html')">HILTI Bohrmaschine H32FAC-34A</a></td>
+					<td>Josef Mayer</th>
+					<td><img src="img/notavail.svg" height="16" title="Nicht verfügbar" /></td>
+					<td><a href=""><span class="glyphicon glyphicon-remove"></span> Nicht mehr vormerken</a></td>
+				</tr>
+			</table>
+			
+			<h4>Meine Geräte</h4>
+			<table class="table">
+				<tr>
+					<th>Name</th>
+					<th>Verfügbarkeit</th>
+					<th>Optionen</th>
+				</tr>
+				<tr>
+					<td><a href="javascript:openLink('detail_bosch.html')">Bosch Bohrmaschine BOHRTEST123</a></td>
+					<td><img src="img/avail.svg" height="16" title="Verfügbar" /> <a href="">Verfügbarkeit ändern...</a></td>
+					<td><a href="javascript:openLink('edit_bosch.html')"><span class="glyphicon glyphicon-edit"></span> Bearbeiten</a><br /><a href=""><span class="glyphicon glyphicon-remove"></span> Löschen</a></td>
+				</tr>
+				<tr>
+					<td colspan="3"><a href="javascript:openLink('new.html')">Gerät Hinzufügen...</a></td>
+				</tr>
+			</table>
+		</div>
+		
+		<footer class="footer">
+			<div class="container">
+			hi
+			</div>
+		</footer>
+	</body>
+</html>

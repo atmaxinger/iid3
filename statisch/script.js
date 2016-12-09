@@ -71,7 +71,7 @@ function open_signup()
 
 function open_portal()
 {
-	alert("portal");
+	openLink("portal.html");
 }
 
 
