@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ToolShare Startseite</title>
+		<meta charset="utf-8" />
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="style.css" />
+				<script src="script.js"></script>
+
+	</head>
+	<body onload="changeNavbar()">
+		<nav class="navbar navbar-fixed-top">
+			<div class="container-fluid">			
+				<div class="navbar-header">
+					<a class="navbar-brand" href="javascript:openLink('index.html')">ToolShare</a>
+				</div>	
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li id="navlogin">
+							<a href="javascript:open_login();" class="nav_link">
+							<span class="glyphicon glyphicon-log-in"></span> Anmelden
+							</a>
+						</li>
+						
+						<li id="navsignup">
+							<a href="javascript:open_signup();" class="nav_link">
+							<span class="glyphicon glyphicon-register"></span> Registrieren
+							</a>
+						</li>
+					
+						<li id="navportal" style="display:none">
+							<a href="javascript:open_portal();" class="nav_link">
+							<span class="glyphicon glyphicon-user"></span> Benutzerportal
+							</a>
+						</li>					
+						<li id="navlogout" style="display:none">
+							<a href="javascript:logout()" class="nav_link">
+							<span class="glyphicon glyphicon-log-out"></span> Abmelden
+							</a>
+						</li>
+						
+					</ul>
+					<div class="input-group nav navbar-nav navbar-left searchbar">
+						<form class="navbar-form" role="search">
+								<input type="text" class="search-query form-control" placeholder="Suchen nach..." style="background-color:white" />
+								<span class="input-group-btn">
+									<button class="btn btn-primary" type="button" onclick="javascript:openLink('search.html')">
+										<span class="glyphicon glyphicon-search"></span>
+									</button>
+								</span>
+						</form>		
+					</div>									
+				</div>
+			</div>
+		</nav>
+
+		<div id="content" class="container">			
+			<div class="col-sm-2">
+				<img id="productimg" class="img-thumbnail" src="img/bosch1.jpg" />
+			</div>
+			<div class="col-sm-8">
+				<h3>Bosch Bohrmaschine BOHRTEST123<img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
+				<section>
+					<h4>Technische Daten</h4>
+					<table class="table-condensed">
+						<tr>
+							<td>Marke</td>
+							<td>Bosch</td>
+						</tr>
+						<tr>
+							<td>Baujahr</td>
+							<td>2013</td>
+						</tr>
+						<tr>
+							<td>Stromquelle</td>
+							<td>Akku</td>
+						</tr>
+					</table>
+				</section>
+				
+				<section>
+					<h4>Beschreibung</h4>
+
+					<p>Hallo! Ich vermiete mein Bosch Bohrmaschine, da ich sie zur Zeit nicht brauche. Bei Interesse einfach melden!</p>
+				</section>
+				
+				<section>
+					<h4>Enthaltenes Zubehör</h4>
+
+					<ul>
+						<li>Bohrer in den Stufen 5-15mm</li>
+						<li>Stemmmeißel</li>
+						<li>Verlängerungen bis 15 cm</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h4>Kontaktaufnahme</h4>
+					<form>
+						<div class="form-group">
+							<label for="inputname">Ihr Name</label>
+							<input type="text" class="form-control" id="inputname" placeholder="Max Mustermann">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Ihre Email</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="max@mustermann.de">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Nachricht</label>
+							<textarea class="form-control" placeholder="Nachricht eingeben"></textarea>
+						</div>
+
+						<button type="submit" class="btn btn-default" onclick="javascript:alert('Anfrage gesendet!')">Nachricht senden</button>
+					</form>
+				</section>
+			</div>
+			<div class="col-sm-2 secondary address">
+				<h4>Tim Taylor</h4>
+				<p>Mankerstraße 25</p>
+				<p>3281 Oberndorf</p>
+				<br />
+				<p><b>Telefon:</b> 02861/21021</p>
+				<p><b>Email:</b> tim@taylor.at</p>
+			</div>
+		</div>
+		
+		<footer class="footer">
+			<div class="container">
+			hi
+			</div>
+		</footer>
+	</body>
+</html>

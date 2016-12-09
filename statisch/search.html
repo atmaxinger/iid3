@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ToolShare Startseite</title>
+		<meta charset="utf-8" />
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="style.css" />
+		
+		<script src="script.js"></script>
+	</head>
+	<body onload="changeNavbar()">
+		<nav class="navbar navbar-fixed-top">
+			<div class="container-fluid">			
+				<div class="navbar-header">
+					<a class="navbar-brand" href="javascript:openLink('index.html')">ToolShare</a>
+				</div>	
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li id="navlogin">
+							<a href="javascript:open_login();" class="nav_link">
+							<span class="glyphicon glyphicon-log-in"></span> Anmelden
+							</a>
+						</li>
+						
+						<li id="navsignup">
+							<a href="javascript:open_signup();" class="nav_link">
+							<span class="glyphicon glyphicon-register"></span> Registrieren
+							</a>
+						</li>
+					
+						<li id="navportal" style="display:none">
+							<a href="javascript:open_portal();" class="nav_link">
+							<span class="glyphicon glyphicon-user"></span> Benutzerportal
+							</a>
+						</li>					
+						<li id="navlogout" style="display:none">
+							<a href="javascript:logout()" class="nav_link">
+							<span class="glyphicon glyphicon-log-out"></span> Abmelden
+							</a>
+						</li>
+						
+					</ul>
+					<div class="input-group nav navbar-nav navbar-left searchbar">
+						<form class="navbar-form" role="search">
+								<input type="text" class="search-query form-control" placeholder="Suchen nach..." style="background-color:white" />
+								<span class="input-group-btn">
+									<button class="btn btn-primary" type="button" onclick="javascript:openLink('search.html')">
+										<span class="glyphicon glyphicon-search"></span>
+									</button>
+								</span>
+						</form>		
+					</div>									
+				</div>
+			</div>
+		</nav>
+
+		<div id="content" class="container">			
+			<div class="row">
+				<div class="col-sm-8 container">
+				  
+				  <div class="row searchresult">	
+					<span class="number">1</span>
+					<img class="img-thumbnail" src="img/bosch1.jpg" />
+					<h4><a href="javascript:openLink('detail_bosch.html')">Bosch Bohrmaschine BOHRTEST123</a> <img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
+		
+					<div class="secondarytext">
+						von <b>Tim Taylor</b> aus Oberndorf (~ 2 km entfernt)
+					</div>
+				</div>
+				  
+				<div class="row searchresult">	
+					<span class="number">2</span>
+					<img class="img-thumbnail" src="img/hilti1.jpg" />
+					<h4><a href="javascript:openLink('detail_hilti.html')">HILTI Bohrmaschine H32FAC-34A</a> <img src="img/notavail.svg" class="av" title="Nicht verfügbar" /></h3>
+		
+					<div class="secondarytext">
+						von <b>Josef Mayer</b> aus Buxtehude (~ 5 km entfernt)
+					</div>
+				</div>
+	
+				</div>				
+				
+				<div class="col-sm-4 secondary">
+					<h3>Suchkriterien</h3>
+				  <form class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-3 control-label" for="inputUmkreis">Umkreis</label>
+						<div class="col-sm-9">
+							<select id="inputUmkreis" class="form-control">
+								<option>5 km (2)</option>
+								<option>10 km (2)</option>
+								<option>20 km (2)</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label" for="inputAvailiability">Verfügbarkeit</label>
+						<div class="col-sm-9">
+							<select id="inputAvailiability" class="form-control">
+								<option>Alle (2)</option>
+								<option>Verfügbar (1)</option>
+								<option>Nicht verfügbar (1)</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label" for="inputBrand">Marke</label>
+						<div class="col-sm-9">
+							<select id="inputBrand" class="form-control">
+								<option>Alle (2)</option>
+								<option>Bosch (1)</option>
+								<option>HILTI (1)</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-3 col-sm-10">
+						  <button type="submit" class="btn btn-default">Kriterien anwenden</button>
+						</div>
+					</div>
+				  </form>
+				</div>
+			</div>			
+		</div>
+		
+		<footer class="footer">
+			<div class="container">
+			hi
+			</div>
+		</footer>
+	</body>
+</html>

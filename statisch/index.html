@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ToolShare Startseite</title>
+		<meta charset="utf-8" />
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="style.css" />
+		
+		<script src="script.js"></script>
+	</head>
+	<body onload="changeNavbar()">
+		<nav class="navbar navbar-fixed-top">
+			<div class="container-fluid">			
+				<div class="navbar-header">
+					<a class="navbar-brand" href="javascript:openLink('index.html')">ToolShare</a>
+				</div>	
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li id="navlogin">
+							<a href="javascript:open_login();" class="nav_link">
+							<span class="glyphicon glyphicon-log-in"></span> Anmelden
+							</a>
+						</li>
+						
+						<li id="navsignup">
+							<a href="javascript:open_signup();" class="nav_link">
+							<span class="glyphicon glyphicon-register"></span> Registrieren
+							</a>
+						</li>
+					
+						<li id="navportal" style="display:none">
+							<a href="javascript:open_portal();" class="nav_link">
+							<span class="glyphicon glyphicon-user"></span> Benutzerportal
+							</a>
+						</li>					
+						<li id="navlogout" style="display:none">
+							<a href="javascript:logout()" class="nav_link">
+							<span class="glyphicon glyphicon-log-out"></span> Abmelden
+							</a>
+						</li>
+						
+					</ul>
+					<div class="input-group nav navbar-nav navbar-left searchbar">
+						<form class="navbar-form" role="search">
+								<input type="text" class="search-query form-control" placeholder="Suchen nach..." style="background-color:white" />
+								<span class="input-group-btn">
+									<button class="btn btn-primary" type="button" onclick="javascript:openLink('search.html')">
+										<span class="glyphicon glyphicon-search"></span>
+									</button>
+								</span>
+						</form>		
+					</div>									
+				</div>
+			</div>
+		</nav>
+
+		<div id="content" class="container">
+		<p>&nbsp;</p>
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<h2>Willkommen zum Prototypen von ToolShare!</h2>
+				<p>ToolShare ist ein innovatives Netzwerk, das es erlaubt, Werkzeuge an Personen in deiner Nähe zu verleihen, beziehungsweise von Personen in deiner Nähe auszuleihen!</p>
+				<h3>Für Suchende</h3>
+				<p>Du kannst ToolShare sogar ohne Registrierung nutzen! Gib einfach oben in das Suchfeld einen Suchbegriff zu deinem gewünschten Werkzeug ein (zB Bohrmaschine) und ab geht die Post!</p>
+				<p>Wir empfehlen dir aber trotzdem, dich für ToolShare zu registrieren! Deine Vorteile:</p>
+				<ul>
+					<li>Benachrichtigung wenn ein Werkzeug verfügbar wird</li>
+					<li>eventuell noch weiteres ;)</li>
+				</ul>
+				
+				<h3>Für die, die gerne verleihen möchten</h3>
+				<p>Du hast die perfekte Plattform gefunden! Melde dich einfach an und füge im Benutzerportal deine Werkzeuge hinzu!</p>
+			</div>
+			<div class="col-sm-2"></div>
+		</div>
+		
+		<footer class="footer">
+			<div class="container">
+			hi
+			</div>
+		</footer>
+	</body>
+</html>
