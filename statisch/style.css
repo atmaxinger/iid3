@@ -11,6 +11,11 @@ nav a {
 	color: white;
 }
 
+
+.search-query {
+	width: 450px !important;
+}
+
 .footer {
 	background-color: #1C1C1C;
 	color: #666;
