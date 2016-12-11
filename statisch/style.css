@@ -108,6 +108,12 @@ nav a {
 	width: 150px;
 }
 
+h3 img {
+	margin-top: -5px;
+	margin-left: 5px;
+	height: 24px;
+}
+
 h3 .av {
 	margin-top: -5px;
 	margin-left: 5px;
@@ -118,6 +124,8 @@ h3 a {
 	font-size: 12px;
 	margin-top: -10px;
 }
+
+
 
 h4 img {
 	height: 18px;
