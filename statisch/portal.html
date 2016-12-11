@@ -63,40 +63,93 @@
 		</nav>
 
 		<div id="content" class="container">
-			<h3>Benutzerportal für Tim Taylor</h3>
-			
-			<h4>Meine Vormerkungen</h4>
-			<table class="table">
-				<tr>
-					<th>Name</th>
-					<th>Von</th>
-					<th>Verfügbarkeit</th>
-					<th>Optionen</th>
-				</tr>
-				<tr>
-					<td><a href="javascript:openLink('detail_hilti.html')">HILTI Bohrmaschine H32FAC-34A</a></td>
-					<td>Josef Mayer</th>
-					<td><img src="img/notavail.svg" height="16" title="Nicht verfügbar" /></td>
-					<td><a href=""><span class="glyphicon glyphicon-remove"></span> Nicht mehr vormerken</a></td>
-				</tr>
-			</table>
-			
-			<h4>Meine Geräte</h4>
-			<table class="table">
-				<tr>
-					<th>Name</th>
-					<th>Verfügbarkeit</th>
-					<th>Optionen</th>
-				</tr>
-				<tr>
-					<td><a href="javascript:openLink('detail_bosch.html')">Bosch Bohrmaschine BOHRTEST123</a></td>
-					<td><img src="img/avail.svg" height="16" title="Verfügbar" /> <a href="">Verfügbarkeit ändern...</a></td>
-					<td><a href="javascript:openLink('edit_bosch.html')"><span class="glyphicon glyphicon-edit"></span> Bearbeiten</a><br /><a href=""><span class="glyphicon glyphicon-remove"></span> Löschen</a></td>
-				</tr>
-				<tr>
-					<td colspan="3"><a href="javascript:openLink('new.html')">Gerät Hinzufügen...</a></td>
-				</tr>
-			</table>
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<h3>Benutzerportal für Tim Taylor</h3>
+				
+				<section>
+					<h4><img src="img/vormerkung.svg" /> Meine Vormerkungen</h4>
+					<p class="description">Hier können Sie Ihre Vormerkungen verwalten. Sie bekommen automatisch eine Nachricht, wenn diese Geräte wieder verfügbar werden.</p>
+					<table class="table">
+						<tr>
+							<th>Name</th>
+							<th>Von</th>
+							<th>Verfügbarkeit</th>
+							<th>Optionen</th>
+						</tr>
+						<tr>
+							<td><a href="javascript:openLink('detail_hilti.html')">HILTI Bohrmaschine H32FAC-34A</a></td>
+							<td>Josef Mayer</th>
+							<td><img src="img/notavail.svg" height="16" title="Nicht verfügbar" /> <font color="red">Nicht verfügbar</font></td>
+							<td><a href=""><span class="glyphicon glyphicon-remove"></span> Nicht mehr vormerken</a></td>
+						</tr>
+					</table>
+				</section>
+				
+				<section>
+					<h4><img src="img/tool.svg" /> Meine Geräte</h4>
+					<p class="description">Hier können Sie Ihre Geräte verwalten. Sie können die allgemeinen Informationen bearbeiten (wie Name, Beschreibung) und auch die Verfügbarkeit ändern (weil Sie das Gerät beispielsweise gerade verliehen haben oder es zur Zeit selbst brauchen). Vergessen Sie aber nicht, das Gerät als wieder verfügbar zu markieren wenn Sie es wieder verleihen möchten :)! Sollten Sie das Gerät nicht mehr anbieten wollen besteht hier auch die Möglichkeit es zu löschen, oder ein neues Gerät hinzuzufügen.</p>
+					<table class="table">
+						<tr>
+							<th>Name</th>
+							<th>Verfügbarkeit</th>
+							<th>Optionen</th>
+						</tr>
+						<tr>
+							<td><a href="javascript:openLink('detail_bosch.html')">Bosch Bohrmaschine BOHRTEST123</a></td>
+							<td><img src="img/avail.svg" height="16" title="Verfügbar" /> <font color="green">Verfügbar</font> | <a href="">ändern...</a></td>
+							<td><a href="javascript:openLink('edit_bosch.html')"><span class="glyphicon glyphicon-edit"></span> Bearbeiten</a><br /><a href=""><span class="glyphicon glyphicon-remove"></span> Löschen</a></td>
+						</tr>
+						<tr>
+							<td colspan="3"><a href="javascript:openLink('new.html')">+ Gerät Hinzufügen...</a></td>
+						</tr>
+					</table>
+				</section>
+				
+				<section>
+					<h4><img src="img/me.svg"> Über mich</h4>
+					<p class="description">Hier kannst du deine Informationen verwalten. Wenn du umziehst, ändere hier auch bitte deine Adresse</p>
+					<form>
+						<div class="row">
+							<div class="form-group col-sm-6">
+								<label for="inputname">Vorame</label>
+								<input type="text" class="form-control" id="inputname" placeholder="Max" value="Tim">
+							</div>
+							<div class="form-group col-sm-6">
+								<label for="inputname">Nachname</label>
+								<input type="text" class="form-control" id="inputname" placeholder="Mustermann" value="Taylor">
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-sm-6">
+								<label for="exampleInputEmail1">Email</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="max@mustermann.de" value="tim@taylor.at">
+							</div>
+							<div class="form-group col-sm-6">
+								<label for="exampleInputEmail1">Telefon</label>
+								<input type="text" class="form-control" id="exampleInputEmail1" placeholder="0664 1234 56 78" value="02861 2102 11">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputname">Straße</label>
+							<input type="text" class="form-control" id="inputname" placeholder="Musterstraße 25" value="Mankerstraße 25">
+						</div>
+						<div class="row">
+							<div class="form-group col-sm-2">
+								<label>PLZ</label>
+								<input type="text" class="form-control" placeholder="1010" value="3281" />
+							</div>
+							<div class="form-group col-sm-10">
+								<label>Ort</label>
+								<input type="text" class="form-control" placeholder="Wien" value="Oberndorf" />
+							</div>
+						</div>
+						
+						<button type="submit" class="btn btn-default">Speichern</button>
+					</form>
+				</section>
+			</div>
+			<div class="col-sm-2"></div>
 		</div>
 		
 		<footer class="footer">
