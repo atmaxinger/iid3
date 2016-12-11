@@ -14,10 +14,14 @@ function isLoggedIn() {
 	return getParameterByName("loggedin") == 1;
 }
 
+function goToLocation(x) {
+	window.location = x;
+}
+
 function logout() {
 	var url = window.location.href.split('?')[0];
 
-	location(url);
+	goToLocation(url);
 }
 
 
@@ -28,7 +32,7 @@ function openLink(link) {
 		l+="?loggedin=1";
 	}
 	
-	location(l);
+	goToLocation(l);
 }
 
 function setHidden(id, status) {
@@ -57,11 +61,15 @@ function changeNavbar() {
 	}
 }
 
+function load_image(el, path) {
+	el.src = path;
+}
+
 function open_login()
 {
 	var url = window.location.href.split('?')[0];
 	
-	location(url + "?loggedin=1");
+	goToLocation(url + "?loggedin=1");
 }
 
 function open_signup()
