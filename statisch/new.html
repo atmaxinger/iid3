@@ -66,39 +66,49 @@
 			<div class="col-sm-2"></div>
 			<div class="col-sm-8">
 			<h3>Gerät hinzufügen</h3>
-				<form>
-					<div class="form-group">
-						<label for="inputname">Name des Geräts</label>
-						<input type="text" class="form-control" id="inputname" placeholder="Kärcher X5000" >
-					</div>			
-					<div class="form-group">
-						<label for="inputname">Bild</label>
-						<input type="file" class="form-control" id="inputname" >
-					</div>	
-		
-					<div class="form-group">
-						<label for="desc">Beschreibung</label>
-						<textarea class="form-control" id="desc"></textarea>
-					</div>
-					<div class="form-group">
-						<label for="exampleInputPassword1">Zubehör</label>
-						<textarea class="form-control"></textarea>
-					</div>
+				<section>
+					<h4><img src="img/info.svg" /> Allgemeine Informationen</h4>
+					<p class="description">Hier kannst du die allgemeinen Informationen des Werkzeugs ändern</p>
+					<form>
+						<div class="form-group">
+							<label for="inputname">Name des Geräts</label>
+							<input type="text" class="form-control" id="inputname" placeholder="Kärcher X5000" >
+						</div>			
+						<div class="form-group">
+							<label for="inputname">Bild</label>
+							<input type="file" class="form-control" id="inputname" >
+						</div>	
+			
+						<div class="form-group">
+							<label for="desc">Beschreibung</label>
+							<textarea class="form-control" id="desc" rows="10"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Zubehör</label>
+							<textarea class="form-control" rows="10" placeholder="* Stromkabel
+* Zusatzakku"></textarea>
+						</div>
+					</form>
+				</section>
+				<section>
+					<h4><img src="img/specs.svg" /> Technische Daten</h4>
+					<p class="description">Bitte gib hier ein paar Technische Daten des Werkzeugs an, damit Interessenten besser entscheiden können, ob das Werkzeug für sie geeignet ist</p>
 					
-					<h3>Technische Daten</h3>
-					<table class="table">
-						<tr>
-							<th>Eigenschaft</th>
-							<th>Wert</th>
-						</tr>
-						<tr>
-							<td colspan="2"><a href="">Weitere Eigenschaft hinzufügen...</a></td>
-						</tr>
-					</table>
+					<form>
+						<table class="table">
+							<tr>
+								<th>Eigenschaft</th>
+								<th>Wert</th>
+							</tr>
+							<tr>
+								<td colspan="2"><a href="">+ Weitere Eigenschaft hinzufügen...</a></td>
+							</tr>
+						</table>
 
-					<button type="button" class="btn btn-default" onclick="openLink('portal.html')">Speichern</button>
-					<button type="button" class="btn btn-default" onclick="openLink('portal.html')">Abbrechen</button>
-				</form>
+						<button type="button" class="btn btn-default" onclick="openLink('portal.html')">Speichern</button>
+						<button type="button" class="btn btn-default" onclick="openLink('portal.html')">Abbrechen</button>
+					</form>
+				</section>
 			</div>
 			<div class="col-sm-2"></div>
 		</div>
