@@ -1,6 +1,52 @@
+* {
+	font-family: Roboto;
+}
 nav {
-	background-color: #04B058 !important;
+	background-color: #EC8231 !important;
 
+}
+
+.btn-primary {
+	color: white;
+	background-image:none;
+
+	background-color: rgb(255,175,66);
+	border-color: #FFAF42;
+}
+
+.btn-primary:hover {
+	border-color: #FFAF42;
+	background-color:#FFD94E;
+}
+
+.btn-primary:active:focus, .btn-primary.active {
+	border-color: #FFAF42;
+	outline:none;
+	background-color:#FF814E;
+}
+
+.btn-default {
+	color: white;
+	background-image:none;
+
+	text-shadow:none;
+
+	background-color: #EC8231;
+	border-color: #EC8231;
+}
+
+.btn-default:hover {
+	background-color: #FFAF42;
+	color: white;
+	border-color: #EC8231;
+}
+
+.btn-default:active:focus {
+	color: white;
+	
+	border-color: #FFAF42;
+	outline:none;
+	background-color:#FF814E;
 }
 
 body {
@@ -9,6 +55,11 @@ body {
 
 nav a {
 	color: white;
+}
+
+.nav_link:hover {
+	color: white;
+	background-color:#FFAF42 !important;
 }
 
 
@@ -55,7 +106,7 @@ nav a {
 	bottom: 0;
 	right: 0;
 		
-	background-color: #F1FFD1;
+	background-color: #eee;
 }
 
 .secondarytext {
