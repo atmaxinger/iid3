@@ -69,6 +69,11 @@ nav a {
 	background-color:#FFAF42 !important;
 }
 
+.navbar-brand:hover {
+	color: rgb(255,175,66) ;
+	text-shadow: none;
+}
+
 
 #logo { 
 	margin-top: 5px;
