@@ -282,9 +282,16 @@ nav .dropdown ul a {
 .searchresult .number {
 	float: left;
 	text-align: center;
-	padding-top: 30px;
 	margin-right: 15px;
 	font-size: 11px;
+}
+
+.isavailiable .number {
+	padding-top: 30px;
+}
+
+.isnotavailiable .number {
+	padding-top: 22px;
 }
 
 .searchresult .av {
