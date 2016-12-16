@@ -3,27 +3,23 @@
 	<head>
 		<title>ToolShare Startseite</title>
 		<meta charset="utf-8" />
-		
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
-
 		<link rel="stylesheet" href="style.css" />
-		
 		<script src="script.js"></script>
 	</head>
 	<body onload="changeNavbar()">
 		<nav class="navbar navbar-fixed-top">
-			<div class="container-fluid">			
+			<div class="container-fluid">
 				<div class="navbar-header">
 					<img id="logo" src="img/logo.svg" />
 					<a class="navbar-brand" href="javascript:openLink('index.html')">ToolShare</a>
-				</div>	
+				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li id="navlogin">
@@ -31,224 +27,203 @@
 							<span class="glyphicon glyphicon-log-in"></span> Anmelden
 							</a>
 						</li>
-						
 						<li id="navsignup">
 							<a href="javascript:open_signup();" class="nav_link">
 							<span class="glyphicon glyphicon-register"></span> Registrieren
 							</a>
 						</li>
-					
 						<li id="navportal" style="display:none">
 							<a href="javascript:open_portal();" class="nav_link">
 							<span class="glyphicon glyphicon-user"></span> Benutzerportal
 							</a>
-						</li>					
+						</li>
 						<li id="navlogout" style="display:none">
 							<a href="javascript:logout()" class="nav_link">
 							<span class="glyphicon glyphicon-log-out"></span> Abmelden
 							</a>
 						</li>
-						
 					</ul>
 					<div class="input-group nav navbar-nav navbar-left searchbar">
 						<form class="navbar-form" role="search">
-								<input type="text" class="search-query form-control" placeholder="Suchen nach..." style="background-color:white" />
-								<span class="input-group-btn">
-									<button class="btn btn-primary" type="button" onclick="javascript:openLink('search.html')">
-										<span class="glyphicon glyphicon-search"></span>
-									</button>
-								</span>
-						</form>		
-					</div>									
+							<input type="text" class="search-query form-control" placeholder="Suchen nach..." style="background-color:white" />
+							<span class="input-group-btn">
+							<button class="btn btn-primary" type="button" onclick="javascript:openLink('search.html')">
+							<span class="glyphicon glyphicon-search"></span>
+							</button>
+							</span>
+						</form>
+					</div>
 				</div>
 			</div>
 		</nav>
-
-		<div id="content" class="container">			
+		<div id="content" class="container">
 			<div class="row">
 				<div class="col-sm-9 container">
-				  
-				  <div class="row searchresult isavailiable">	
-					<span class="number">1</span>
-					<img class="img-thumbnail" src="img/bosch1.jpg" />
-					<h4><a href="javascript:openLink('detail_bosch.html')">Bosch Bohrmaschine BOHRTEST123</a> <img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
-		
-					<div class="secondarytext">
-						von <b>Tim Taylor</b> aus Oberndorf (~ 2 km entfernt)
+					<div class="row searchresult isavailiable">
+						<span class="number">1</span>
+						<img class="img-thumbnail" src="img/bosch1.jpg" />
+						<h4>
+						<a href="javascript:openLink('detail_bosch.html')">Bosch Bohrmaschine BOHRTEST123</a> <img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
+						<div class="secondarytext">
+							von <b>Tim Taylor</b> aus Oberndorf (~ 2 km entfernt)
+						</div>
+					</div>
+					<div class="row searchresult isnotavailiable">
+						<span class="number">2</span>
+						<img class="img-thumbnail" src="img/hilti1.jpg" />
+						<h4>
+						<a href="javascript:openLink('detail_hilti.html')">HILTI Bohrmaschine H32FAC-34A</a> <img src="img/notavail.svg" class="av" title="Nicht verfügbar" /></h3>
+						<div class="secondarytext">
+							von <b>Josef Mayer</b> aus Buxtehude (~ 3 km entfernt)
+						</div>
+					</div>
+					<div class="row searchresult isavailiable">
+						<span class="number">3</span>
+						<img class="img-thumbnail" src="img/bosch2.png" />
+						<h4>
+						<a href="javascript:openLink('detail_bosch.html')">Bosch Bohrhammer mit SDS-plus GBH 2-24 D</a> <img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
+						<div class="secondarytext">
+							von <b>Reinhard Beinhart</b> aus Dort (~ 5 km entfernt)
+						</div>
+					</div>
+					<div class="row searchresult isnotavailiable">
+						<span class="number">4</span>
+						<img class="img-thumbnail" src="img/bosch3.jpg" />
+						<h4>
+						<a href="javascript:openLink('detail_hilti.html')">Bosch Bohr- und Stemmhammer GBH 8-45 D</a> <img src="img/notavail.svg" class="av" title="Nicht verfügbar" /></h3>
+						<div class="secondarytext">
+							von <b>Gerhard Maier</b> aus Leon (~ 9 km entfernt)
+						</div>
+					</div>
+					<div class="row searchresult isnotavailiable">
+						<span class="number">5</span>
+						<img class="img-thumbnail" src="img/einhell1.jpg" />
+						<h4>
+						<a href="javascript:openLink('detail_hilti.html')">Einhell Bohr- und Stemmhammer TE-RH 38 E</a> <img src="img/notavail.svg" class="av" title="Nicht verfügbar" /></h3>
+						<div class="secondarytext">
+							von <b>Josefine Schuster</b> aus Wienderneustadt (~ 24 km entfernt)
+						</div>
+					</div>
+					<div class="row searchresult isavailiable">
+						<span class="number">6</span>
+						<img class="img-thumbnail" src="img/dewalt1.jpg" />
+						<h4>
+						<a href="javascript:openLink('detail_bosch.html')">DEWALT Akku-Bohrschrauber DCD 790 D2</a> <img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
+						<div class="secondarytext">
+							von <b>Hubert Gorbach</b> aus Wien (~ 30 km entfernt)
+						</div>
+					</div>
+					<div class="row searchresult isavailiable">
+						<span class="number">7</span>
+						<img class="img-thumbnail" src="img/bosch4.jpg" />
+						<h4>
+						<a href="javascript:openLink('detail_bosch.html')">Bosch E-Schlagbohrmaschine PSB Universal</a> <img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
+						<div class="secondarytext">
+							von <b>Franz Untendurch</b> aus Hier (~ 4 km entfernt)
+						</div>
+					</div>
+					<div class="row searchresult isnotavailiable">
+						<span class="number">8</span>
+						<img class="img-thumbnail" src="img/makita1.jpg" />
+						<h4>
+						<a href="javascript:openLink('detail_hilti.html')">Makita Winkel-Bohrmaschine DA 3010 F</a> <img src="img/notavail.svg" class="av" title="Nicht verfügbar" /></h3>
+						<div class="secondarytext">
+							von <b>Marlene Wunderlich</b> aus St. Johann (~ 13 km entfernt)
+						</div>
+					</div>
+					<div class="row searchresult isavailiable">
+						<span class="number">9</span>
+						<img class="img-thumbnail" src="img/makita2.jpg" />
+						<h4>
+						<a href="javascript:openLink('detail_bosch.html')">Makita Akku-Schlagbohrschrauber 2-Gang, DHP 456 RF3J</a> <img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
+						<div class="secondarytext">
+							von <b>Mr Schrauber</b> aus Amstetten (~ 14 km entfernt)
+						</div>
+					</div>
+					<div class="row searchresult isnotavailiable">
+						<span class="number">10</span>
+						<img class="img-thumbnail" src="img/scheppach1.jpg" />
+						<h4>
+						<a href="javascript:openLink('detail_hilti.html')">SCHEPPACH Benzin-Erdbohrgerät EB1650</a> <img src="img/notavail.svg" class="av" title="Nicht verfügbar" /></h3>
+						<div class="secondarytext">
+							von <b>Ms Bohrer</b> aus St. Pölten (~ 16 km entfernt)
+						</div>
+					</div>
+					<div class="row searchresult isavailiable">
+						<span class="number">11</span>
+						<img class="img-thumbnail" src="img/bosch5.jpg" />
+						<h4>
+						<a href="javascript:openLink('detail_bosch.html')">Bosch Akku-Winkelschrauber GWB</a> <img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
+						<div class="secondarytext">
+							von <b>Alexander Van der Belln</b> aus Hofburg (~ 7 km entfernt)
+						</div>
+					</div>
+					<div class="row searchresult isavailiable">
+						<span class="number">12</span>
+						<img class="img-thumbnail" src="img/einhell2.jpg" />
+						<h4>
+						<a href="javascript:openLink('detail_bosch.html')">Einhell Abbruchhammer TE-DH 1027</a> <img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
+						<div class="secondarytext">
+							von <b>Martin Hofer</b> aus Melk (~ 4 km entfernt)
+						</div>
+					</div>
+					<div class="row searchresult isnotavailiable">
+						<span class="number">13</span>
+						<img class="img-thumbnail" src="img/makita3.jpg" />
+						<h4>
+						<a href="javascript:openLink('detail_hilti.html')">Makita Akku-Bohrschrauber DDF 343 SHE</a> <img src="img/notavail.svg" class="av" title="Nicht verfügbar" /></h3>
+						<div class="secondarytext">
+							von <b>Sepp Hackl</b> aus Maria Taferl (~ 19 km entfernt)
+						</div>
 					</div>
 				</div>
-				  
-				<div class="row searchresult isnotavailiable">	
-					<span class="number">2</span>
-					<img class="img-thumbnail" src="img/hilti1.jpg" />
-					<h4><a href="javascript:openLink('detail_hilti.html')">HILTI Bohrmaschine H32FAC-34A</a> <img src="img/notavail.svg" class="av" title="Nicht verfügbar" /></h3>
-		
-					<div class="secondarytext">
-						von <b>Josef Mayer</b> aus Buxtehude (~ 3 km entfernt)
-					</div>
-				</div>
-
-				<div class="row searchresult isavailiable">	
-					<span class="number">3</span>
-					<img class="img-thumbnail" src="img/bosch2.png" />
-					<h4><a href="javascript:openLink('detail_bosch.html')">Bosch Bohrhammer mit SDS-plus GBH 2-24 D</a> <img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
-		
-					<div class="secondarytext">
-						von <b>Reinhard Beinhart</b> aus Dort (~ 5 km entfernt)
-					</div>
-				</div>
-				
-				<div class="row searchresult isnotavailiable">	
-					<span class="number">4</span>
-					<img class="img-thumbnail" src="img/bosch3.jpg" />
-					<h4><a href="javascript:openLink('detail_hilti.html')">Bosch Bohr- und Stemmhammer GBH 8-45 D</a> <img src="img/notavail.svg" class="av" title="Nicht verfügbar" /></h3>
-		
-					<div class="secondarytext">
-						von <b>Gerhard Maier</b> aus Leon (~ 9 km entfernt)
-					</div>
-				</div>
-	
-				<div class="row searchresult isnotavailiable">	
-					<span class="number">5</span>
-					<img class="img-thumbnail" src="img/einhell1.jpg" />
-					<h4><a href="javascript:openLink('detail_hilti.html')">Einhell Bohr- und Stemmhammer TE-RH 38 E</a> <img src="img/notavail.svg" class="av" title="Nicht verfügbar" /></h3>
-		
-					<div class="secondarytext">
-						von <b>Josefine Schuster</b> aus Wienderneustadt (~ 24 km entfernt)
-					</div>
-				</div>
-	
-				<div class="row searchresult isavailiable">	
-					<span class="number">6</span>
-					<img class="img-thumbnail" src="img/dewalt1.jpg" />
-					<h4><a href="javascript:openLink('detail_bosch.html')">DEWALT Akku-Bohrschrauber DCD 790 D2</a> <img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
-		
-					<div class="secondarytext">
-						von <b>Hubert Gorbach</b> aus Wien (~ 30 km entfernt)
-					</div>
-				</div>
-				
-				<div class="row searchresult isavailiable">	
-					<span class="number">7</span>
-					<img class="img-thumbnail" src="img/bosch4.jpg" />
-					<h4><a href="javascript:openLink('detail_bosch.html')">Bosch E-Schlagbohrmaschine PSB Universal</a> <img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
-		
-					<div class="secondarytext">
-						von <b>Franz Untendurch</b> aus Hier (~ 4 km entfernt)
-					</div>
-				</div>
-
-				<div class="row searchresult isnotavailiable">	
-					<span class="number">8</span>
-					<img class="img-thumbnail" src="img/makita1.jpg" />
-					<h4><a href="javascript:openLink('detail_hilti.html')">Makita Winkel-Bohrmaschine DA 3010 F</a> <img src="img/notavail.svg" class="av" title="Nicht verfügbar" /></h3>
-		
-					<div class="secondarytext">
-						von <b>Marlene Wunderlich</b> aus St. Johann (~ 13 km entfernt)
-					</div>
-				</div>
-
-
-				<div class="row searchresult isavailiable">	
-					<span class="number">9</span>
-					<img class="img-thumbnail" src="img/makita2.jpg" />
-					<h4><a href="javascript:openLink('detail_bosch.html')">Makita Akku-Schlagbohrschrauber 2-Gang, DHP 456 RF3J</a> <img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
-		
-					<div class="secondarytext">
-						von <b>Mr Schrauber</b> aus Amstetten (~ 14 km entfernt)
-					</div>
-				</div>
-
-				<div class="row searchresult isnotavailiable">	
-					<span class="number">10</span>
-					<img class="img-thumbnail" src="img/scheppach1.jpg" />
-					<h4><a href="javascript:openLink('detail_hilti.html')">SCHEPPACH Benzin-Erdbohrgerät EB1650</a> <img src="img/notavail.svg" class="av" title="Nicht verfügbar" /></h3>
-		
-					<div class="secondarytext">
-						von <b>Ms Bohrer</b> aus St. Pölten (~ 16 km entfernt)
-					</div>
-				</div>
-				
-				<div class="row searchresult isavailiable">	
-					<span class="number">11</span>
-					<img class="img-thumbnail" src="img/bosch5.jpg" />
-					<h4><a href="javascript:openLink('detail_bosch.html')">Bosch Akku-Winkelschrauber GWB</a> <img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
-		
-					<div class="secondarytext">
-						von <b>Alexander Van der Belln</b> aus Hofburg (~ 7 km entfernt)
-					</div>
-				</div>								
-
-				<div class="row searchresult isavailiable">	
-					<span class="number">12</span>
-					<img class="img-thumbnail" src="img/einhell2.jpg" />
-					<h4><a href="javascript:openLink('detail_bosch.html')">Einhell Abbruchhammer TE-DH 1027</a> <img src="img/avail.svg" class="av" title="Verfügbar" /></h3>
-		
-					<div class="secondarytext">
-						von <b>Martin Hofer</b> aus Melk (~ 4 km entfernt)
-					</div>
-				</div>
-
-				<div class="row searchresult isnotavailiable">	
-					<span class="number">13</span>
-					<img class="img-thumbnail" src="img/makita3.jpg" />
-					<h4><a href="javascript:openLink('detail_hilti.html')">Makita Akku-Bohrschrauber DDF 343 SHE</a> <img src="img/notavail.svg" class="av" title="Nicht verfügbar" /></h3>
-		
-					<div class="secondarytext">
-						von <b>Sepp Hackl</b> aus Maria Taferl (~ 19 km entfernt)
-					</div>
-				</div>
-				
-			</div>
-				
 				<div class="col-sm-3 secondary">
 					<h3>Suchkriterien</h3>
-				  <form class="form-horizontal">
-					<div class="form-group">
-						<label class="col-sm-3 control-label" for="inputUmkreis">Umkreis</label>
-						<div class="col-sm-9">
-							<select id="inputUmkreis" class="form-control">
-								<option>5 km (5)</option>
-								<option>10 km (7)</option>
-								<option>20 km (11)</option>
-								<option>30 km (13)</option>
-							</select>
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="inputUmkreis">Umkreis</label>
+							<div class="col-sm-9">
+								<select id="inputUmkreis" class="form-control">
+									<option>5 km (5)</option>
+									<option>10 km (7)</option>
+									<option>20 km (11)</option>
+									<option>30 km (13)</option>
+								</select>
+							</div>
 						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label" for="inputAvailiability">Verfügbarkeit</label>
-						<div class="col-sm-9">
-							<select id="inputAvailiability" class="form-control">
-								<option>Alle (13)</option>
-								<option>Verfügbar (7)</option>
-								<option>Nicht verfügbar (6)</option>
-							</select>
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="inputAvailiability">Verfügbarkeit</label>
+							<div class="col-sm-9">
+								<select id="inputAvailiability" class="form-control">
+									<option>Alle (13)</option>
+									<option>Verfügbar (7)</option>
+									<option>Nicht verfügbar (6)</option>
+								</select>
+							</div>
 						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-sm-3 control-label" for="inputBrand">Marke</label>
-						<div class="col-sm-9">
-							<select id="inputBrand" class="form-control">
-								<option>Alle (13)</option>
-								<option>Bosch (5)</option>
-								<option>Dewalt (1)</option>
-								<option>Einhell (2)</option>
-								<option>HILTI (1)</option>
-								<option>Makita (3)</otion>
-								<option>Scheppach (1)</option>
-							</select>
+						<div class="form-group">
+							<label class="col-sm-3 control-label" for="inputBrand">Marke</label>
+							<div class="col-sm-9">
+								<select id="inputBrand" class="form-control">
+									<option>Alle (13)</option>
+									<option>Bosch (5)</option>
+									<option>Dewalt (1)</option>
+									<option>Einhell (2)</option>
+									<option>HILTI (1)</option>
+									<option>Makita (3)</otion>
+									<option>Scheppach (1)</option>
+								</select>
+							</div>
 						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-sm-offset-3 col-sm-10">
-						  <button type="submit" class="btn btn-default">Kriterien anwenden</button>
+						<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-10">
+								<button type="submit" class="btn btn-default">Kriterien anwenden</button>
+							</div>
 						</div>
-					</div>
-				  </form>
+					</form>
 				</div>
-			</div>			
+			</div>
 		</div>
-		
 		<footer class="footer">
 			<div class="container">
 				<div class="col-sm-2">
@@ -257,22 +232,17 @@
 					<p><a href="#">AGBs</a>
 					<p><a href="#">Cookie Policy</a>
 				</div>
-				
 				<div class="col-sm-2">
 					<p class="ueberschrift"><b>Hilfe</b></p>
 					<p><a href="#">FAQ</a></p>
 					<p><a href="#">Tutorial</a></p>
 					<p><a href="#">Support</a></p>
 				</div>
-
-
 				<div class="col-sm-5 social">
 					<p class="ueberschrift"><b>Folge uns auf</b></p>
 					<p><img src="img/twitter.svg" class="social_logo" onmouseover="load_image(this, 'img/twitter_over.svg')" onmouseout="load_image(this, 'img/twitter.svg')" /> @toolshare</p>
 					<p><img src="img/facebook.svg" class="social_logo" onmouseover="load_image(this, 'img/facebook_over.svg')" onmouseout="load_image(this, 'img/facebook.svg')" /> /ToolShare</p>
-				</div>	
-				
-							
+				</div>
 				<div class="col-sm-3 contact">
 					<p>&copy; 2016 Alle Recht vorbehalten.</p>
 					<p>&nbsp;</p>
