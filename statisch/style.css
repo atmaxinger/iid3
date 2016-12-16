@@ -160,13 +160,12 @@ nav a {
 
 .firstline {
 	height: 60px !important;
-	line-height: 60px;
 	margin-left: 10px;
+	padding-top: 10px;
 }
 
 .firstline h4 {
 	font-size: 16px;
-	line-height: 60px;
 }
 
 .searchresult {
