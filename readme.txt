@@ -1,3 +1,11 @@
+unser Prototyp unterstützt:
+ - Browser: Google Chrome (Version 55.0.2883.95 (64-bit))
+ - Auflösung: 1400 x 900
+
+
+
+Für die Entwicklung des Prototyps haben wir folgende Überlegungen angestellt:
+
 Es gibt keine Kommunikation über unsere Plattform sondern nur unter den Usern direkt.
 Ausgeschlossen ist es nicht, dass sich gewerbliche Anbieter ebenfalls anmelden aber
 es ist nicht möglich dass dies an ein kommerzielles Angebot geknüpft wird.
