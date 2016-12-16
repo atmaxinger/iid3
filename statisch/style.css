@@ -1,6 +1,15 @@
 * {
 	font-family: Roboto;
 }
+
+html, body {
+	height: 100%;
+}
+
+body {
+	padding-top: 50px;
+}
+
 nav {
 	background-color: #EC8231 !important;
 
@@ -49,9 +58,7 @@ nav {
 	background-color:#FF814E;
 }
 
-body {
-		margin-top: 50px;
-}
+
 
 nav a {
 	color: white;
@@ -95,7 +102,8 @@ nav a {
 }
 
 #content {
-	min-height: 600px;
+	min-height: calc(100% - 50px);
+	
 	width: 100% !important;
 	position: relative;
 }
