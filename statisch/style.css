@@ -88,15 +88,47 @@ nav a {
 }
 
 .footer {
-	background-color: #1C1C1C;
-	color: #666;
+	background-color: #5d5d5d;
+	color: white;
 	
 	padding: 10px;
+	padding-top: 40px;
 	
-	height: 60px;
+	height: 200px;
 	width: 100%;
+}
+
+.footer a {
+	color: white;
+	text-decoration: underline;
+}
+
+.footer .contact {
+	text-align: right;
+	color: #aeaeae;
+	font-size: 11px;
 	
-	text-align: center;
+	line-height: 10px;
+}
+
+.footer .contact p {
+	margin-bottom: 3px;
+}
+
+.footer .social {
+}
+
+
+.footer .col-sm-2 p {
+	margin-bottom: 5px;
+}
+
+.footer .ueberschrift {
+	margin-bottom: 15px !important;
+}
+
+.footer b {
+	font-size: 18px;
 }
 
 .social_logo {
@@ -107,7 +139,7 @@ nav a {
 }
 
 #content {
-	min-height: calc(100% - 50px);
+	min-height: calc(100% - 200px);
 	
 	width: 100% !important;
 	position: relative;
