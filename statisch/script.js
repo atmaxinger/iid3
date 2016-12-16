@@ -59,6 +59,10 @@ function changeNavbar() {
 	}
 }
 
+
+function forgot_password() {
+}
+
 function load_image(el, path) {
 	el.src = path;
 }
@@ -72,7 +76,7 @@ function open_login()
 
 function open_signup()
 {
-	alert("open_signup");
+	$('#myModal').modal('show');
 }
 
 function open_portal()

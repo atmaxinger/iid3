@@ -4,6 +4,9 @@
 		<title>ToolShare Startseite</title>
 		<meta charset="utf-8" />
 		
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<!-- Optional theme -->
@@ -18,26 +21,86 @@
 
 	</head>
 	<body onload="changeNavbar()">
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		    <div class="modal-dialog modal-sx">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		                <h4 class="modal-title" id="myModalLabel">Registrierung</h4>
+		            </div>
+		            <div class="modal-body">
+		                <div class="row">
+		                    <div class="col-md-12">
+		                        <!-- Nav tabs -->
+		                        <!-- Tab panes -->
+		                        
+		                            <div class="tab-pane active" id="Registration">
+		                                <form role="form" class="form-horizontal">
+		                                <div class="form-group">
+		                                    <label for="email" class="col-sm-3 control-label">
+		                                        Name</label>
+		                                    <div class="col-sm-9">
+		                                        <div class="row">
+		                                            <div class="col-md-4">
+		                                                <select class="form-control">
+		                                                    <option>Herr</option>
+		                                                    <option>Frau</option>
+		                                                </select>
+		                                            </div>
+		                                            <div class="col-md-8">
+		                                                <input type="text" class="form-control" placeholder="Name" />
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="form-group">
+		                                    <label for="email" class="col-sm-3 control-label">
+		                                        E-Mail</label>
+		                                    <div class="col-sm-9">
+		                                        <input type="email" class="form-control" id="email" placeholder="Email" />
+		                                    </div>
+		                                </div>
+		                                <div class="form-group">
+		                                    <label for="mobile" class="col-sm-3 control-label">
+		                                        Telefon</label>
+		                                    <div class="col-sm-9">
+		                                        <input type="email" class="form-control" id="mobile" placeholder="Mobile" />
+		                                    </div>
+		                                </div>
+		                                <div class="form-group">
+		                                    <label for="password" class="col-sm-3 control-label">
+		                                        Passwort</label>
+		                                    <div class="col-sm-9">
+		                                        <input type="password" class="form-control" id="password" placeholder="Password" />
+		                                    </div>
+		                                </div>
+		                                <div class="row">
+		                                    <div class="col-sm-3">
+		                                    </div>
+		                                    <div class="col-sm-9">
+		                                        <button type="button" class="btn btn-primary">
+		                                            Registrieren</button>
+		                                        <button type="button" class="btn btn-cancle">
+		                                            Abbrechen</button>
+		                                    </div>
+		                                </div>
+		                                </form>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
 		<nav class="navbar navbar-fixed-top">
 			<div class="container-fluid">			
 				<div class="navbar-header">
-					<img id="logo" src="img/logo.svg" />
+					<a href="javascript:openLink('index.html')"><img id="logo" src="img/logo.svg" /></a>
 					<a class="navbar-brand" href="javascript:openLink('index.html')">ToolShare</a>
 				</div>	
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li id="navlogin">
-							<a href="javascript:open_login();" class="nav_link">
-							<span class="glyphicon glyphicon-log-in"></span> Anmelden
-							</a>
-						</li>
-						
-						<li id="navsignup">
-							<a href="javascript:open_signup();" class="nav_link">
-							<span class="glyphicon glyphicon-register"></span> Registrieren
-							</a>
-						</li>
-					
 						<li id="navportal" style="display:none">
 							<a href="javascript:open_portal();" class="nav_link">
 							<span class="glyphicon glyphicon-user"></span> Benutzerportal
@@ -49,6 +112,35 @@
 							</a>
 						</li>
 						
+						<li class="dropdown" id="logindropdown">
+				          	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"> <b>Login</b> <span class="caret"></span></a>
+				            <ul id="login-dp" class="dropdown-menu">
+				                <li>
+				                     <div class="row">
+				                            <div class="col-md-12">
+				                                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+				                                        <div class="form-group">
+				                                             <label class="sr-only" for="exampleInputEmail2">Email-Adresse</label>
+				                                             <input type="email" class="form-control" id="exampleInputEmail2" placeholder="E-Mail" required value="tim@taylor.at">
+				                                        </div>
+				                                        <div class="form-group">
+				                                             <label class="sr-only" for="exampleInputPassword2">Passwort</label>
+				                                             <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Passwort" required value="Passwort">
+				                                             <div class="help-block text-right"><a href="javascript:forgot_password();">Passwort vergessen?</a></div>
+				                                        </div>
+				                                        <div class="form-group">
+				                                             <input type="button" class="btn btn-primary btn-block" onclick="javascript:open_login();" value="Einloggen" />
+				                                        </div>
+				                                 </form>
+				                            </div>
+				                            <div class="bottom text-center">
+				                                Noch kein Konto? <a href="javascript:open_signup();"><b>Registrieren</b></a>
+				                            </div>
+				                     </div>
+				                </li>
+				            </ul>
+				        </li>
+										
 					</ul>
 					<div class="input-group nav navbar-nav navbar-left searchbar">
 						<form class="navbar-form" role="search">
