@@ -1,3 +1,12 @@
+$(document).ready(function(){
+	$(".search-query").keypress(function(e) {
+		if (e.keyCode == 13) {
+	        openLink('search.html');
+	        return false;
+	    }
+	});
+});
+
 function getParameterByName(name, url) {
     if (!url) {
       url = window.location.href;
