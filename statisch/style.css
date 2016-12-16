@@ -105,7 +105,7 @@ nav {
 	background-color:#FF814E;
 }
 
-.btn-default {
+.btn-default, .dropdown ul .btn-primary, #myModal .btn-primary {
 	color: white;
 	background-image:none;
 
@@ -115,13 +115,13 @@ nav {
 	border-color: #EC8231;
 }
 
-.btn-default:hover {
+.btn-default:hover, .dropdown ul .btn-primary:hover, #myModal .btn-primary:hover {
 	background-color: #FFAF42;
 	color: white;
 	border-color: #EC8231;
 }
 
-.btn-default:active:focus {
+.btn-default:active:focus, .dropdown ul .btn-primary:active:focus, #myModal .btn-primary:active:focus {
 	color: white;
 	
 	border-color: #FFAF42;
@@ -136,10 +136,10 @@ nav a {
 }
 
 nav .dropdown ul a {
-	color: #FFAF42;
+	color: #EC8231;
 }
 
-.nav_link:hover {
+.nav_link:hover, .dropdown-toggle:hover, .open>.dropdown-toggle {
 	color: white;
 	background-color:#FFAF42 !important;
 }
