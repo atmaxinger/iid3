@@ -4,6 +4,8 @@
 		<title>ToolShare Startseite</title>
 		<meta charset="utf-8" />
 		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<!-- Optional theme -->
@@ -26,17 +28,17 @@
 				</div>	
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
-						<li id="navlogin">
+						<!--<li id="navlogin">
 							<a href="javascript:open_login();" class="nav_link">
 							<span class="glyphicon glyphicon-log-in"></span> Anmelden
 							</a>
-						</li>
+						</li> -->
 						
-						<li id="navsignup">
+						<!--<li id="navsignup">
 							<a href="javascript:open_signup();" class="nav_link">
 							<span class="glyphicon glyphicon-register"></span> Registrieren
 							</a>
-						</li>
+						</li>-->
 					
 						<li id="navportal" style="display:none">
 							<a href="javascript:open_portal();" class="nav_link">
@@ -49,6 +51,35 @@
 							</a>
 						</li>
 						
+						<li class="dropdown" id="logindropdown">
+				          	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+				            <ul id="login-dp" class="dropdown-menu">
+				                <li>
+				                     <div class="row">
+				                            <div class="col-md-12">
+				                                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+				                                        <div class="form-group">
+				                                             <label class="sr-only" for="exampleInputEmail2">Email-Adresse</label>
+				                                             <input type="email" class="form-control" id="exampleInputEmail2" placeholder="E-Mail" required value="tim@taylor.at">
+				                                        </div>
+				                                        <div class="form-group">
+				                                             <label class="sr-only" for="exampleInputPassword2">Passwort</label>
+				                                             <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Passwort" required value="Passwort">
+				                                             <div class="help-block text-right"><a href="">Passwort vergessen?</a></div>
+				                                        </div>
+				                                        <div class="form-group">
+				                                             <input type="button" class="btn btn-primary btn-block" onclick="javascript:open_login();" value="Einloggen" />
+				                                        </div>
+				                                 </form>
+				                            </div>
+				                            <div class="bottom text-center">
+				                                Noch kein Konto? <a href="javascript:open_signup();"><b>Registrieren</b></a>
+				                            </div>
+				                     </div>
+				                </li>
+				            </ul>
+				        </li>
+										
 					</ul>
 					<div class="input-group nav navbar-nav navbar-left searchbar">
 						<form class="navbar-form" role="search">

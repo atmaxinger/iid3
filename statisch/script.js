@@ -48,14 +48,12 @@ function setHidden(id, status) {
 
 function changeNavbar() {
 	if(isLoggedIn()) {
-		setHidden("navlogin", true);
-		setHidden("navsignup", true);
+		setHidden("logindropdown", true);
 		setHidden("navlogout", false);
 		setHidden("navportal", false);
 	}
 	else {
-		setHidden("navlogin", false);
-		setHidden("navsignup", false);
+		setHidden("logindropdown", false);
 		setHidden("navlogout", true);
 		setHidden("navportal", true);
 	}
