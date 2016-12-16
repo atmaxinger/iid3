@@ -1,244 +1,249 @@
 <!doctype html>
 <html>
-	<head>
-		<title>ToolShare Startseite</title>
-		<meta charset="utf-8" />
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+<head>
+	<title>ToolShare Startseite</title>
+	<meta charset="utf-8" />
 
-		<link rel="stylesheet" href="style.css" />
-		
-		<script src="script.js"></script>
-	</head>
-	<body onload="changeNavbar()">
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-		    <div class="modal-dialog modal-sx">
-		        <div class="modal-content">
-		            <div class="modal-header">
-		                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-		                <h4 class="modal-title" id="myModalLabel">Registrierung</h4>
-		            </div>
-		            <div class="modal-body">
-		                <div class="row">
-		                    <div class="col-md-12">
-		                        <!-- Nav tabs -->
-		                        <!-- Tab panes -->
-		                        
-		                            <div class="tab-pane active" id="Registration">
-		                                <form role="form" class="form-horizontal">
-		                                <div class="form-group">
-		                                    <label for="email" class="col-sm-3 control-label">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css" />
+
+	<script src="script.js"></script>
+</head>
+
+<body onload="changeNavbar()">
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sx">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h4 class="modal-title" id="myModalLabel">Registrierung</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-12">
+							<!-- Nav tabs -->
+							<!-- Tab panes -->
+
+							<div class="tab-pane active" id="Registration">
+								<form role="form" class="form-horizontal">
+									<div class="form-group">
+										<label for="email" class="col-sm-3 control-label">
 		                                        Name</label>
-		                                    <div class="col-sm-9">
-		                                        <div class="row">
-		                                            <div class="col-md-4">
-		                                                <select class="form-control">
+										<div class="col-sm-9">
+											<div class="row">
+												<div class="col-md-4">
+													<select class="form-control">
 		                                                    <option>Herr</option>
 		                                                    <option>Frau</option>
 		                                                </select>
-		                                            </div>
-		                                            <div class="col-md-8">
-		                                                <input type="text" class="form-control" placeholder="Name" />
-		                                            </div>
-		                                        </div>
-		                                    </div>
-		                                </div>
-		                                <div class="form-group">
-		                                    <label for="email" class="col-sm-3 control-label">
+												</div>
+												<div class="col-md-8">
+													<input type="text" class="form-control" placeholder="Name" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="email" class="col-sm-3 control-label">
 		                                        E-Mail</label>
-		                                    <div class="col-sm-9">
-		                                        <input type="email" class="form-control" id="email" placeholder="Email" />
-		                                    </div>
-		                                </div>
-		                                <div class="form-group">
-		                                    <label for="mobile" class="col-sm-3 control-label">
+										<div class="col-sm-9">
+											<input type="email" class="form-control" id="email" placeholder="Email" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="mobile" class="col-sm-3 control-label">
 		                                        Telefon</label>
-		                                    <div class="col-sm-9">
-		                                        <input type="email" class="form-control" id="mobile" placeholder="Mobile" />
-		                                    </div>
-		                                </div>
-		                                <div class="form-group">
-		                                    <label for="password" class="col-sm-3 control-label">
+										<div class="col-sm-9">
+											<input type="email" class="form-control" id="mobile" placeholder="Mobile" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="password" class="col-sm-3 control-label">
 		                                        Passwort</label>
-		                                    <div class="col-sm-9">
-		                                        <input type="password" class="form-control" id="password" placeholder="Password" />
-		                                    </div>
-		                                </div>
-		                                <div class="row">
-		                                    <div class="col-sm-3">
-		                                    </div>
-		                                    <div class="col-sm-9">
-		                                        <button type="button" class="btn btn-primary">
+										<div class="col-sm-9">
+											<input type="password" class="form-control" id="password" placeholder="Password" />
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3">
+										</div>
+										<div class="col-sm-9">
+											<button type="button" class="btn btn-primary">
 		                                            Registrieren</button>
-		                                        <button type="button" class="btn btn-cancle">
+											<button type="button" class="btn btn-cancle">
 		                                            Abbrechen</button>
-		                                    </div>
-		                                </div>
-		                                </form>
-		                            </div>
-		                        </div>
-		                    </div>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		<nav class="navbar navbar-fixed-top">
-			<div class="container-fluid">			
-				<div class="navbar-header">
-					<a href="javascript:openLink('index.html')"><img id="logo" src="img/logo.svg" /></a>
-					<a class="navbar-brand" href="javascript:openLink('index.html')">ToolShare</a>
-				</div>	
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li id="navportal" style="display:none">
-							<a href="javascript:open_portal();" class="nav_link">
-							<span class="glyphicon glyphicon-user"></span> Benutzerportal
-							</a>
-						</li>					
-						<li id="navlogout" style="display:none">
-							<a href="javascript:logout()" class="nav_link">
-							<span class="glyphicon glyphicon-log-out"></span> Abmelden
-							</a>
-						</li>
-						
-						<li class="dropdown" id="logindropdown">
-				          	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"> <b>Login</b> <span class="caret"></span></a>
-				            <ul id="login-dp" class="dropdown-menu">
-				                <li>
-				                     <div class="row">
-				                            <div class="col-md-12">
-				                                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-				                                        <div class="form-group">
-				                                             <label class="sr-only" for="exampleInputEmail2">Email-Adresse</label>
-				                                             <input type="email" class="form-control" id="exampleInputEmail2" placeholder="E-Mail" required value="tim@taylor.at">
-				                                        </div>
-				                                        <div class="form-group">
-				                                             <label class="sr-only" for="exampleInputPassword2">Passwort</label>
-				                                             <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Passwort" required value="Passwort">
-				                                             <div class="help-block text-right"><a href="javascript:forgot_password();">Passwort vergessen?</a></div>
-				                                        </div>
-				                                        <div class="form-group">
-				                                             <input type="button" class="btn btn-primary btn-block" onclick="javascript:open_login();" value="Einloggen" />
-				                                        </div>
-				                                 </form>
-				                            </div>
-				                            <div class="bottom text-center">
-				                                Noch kein Konto? <a href="javascript:open_signup();"><b>Registrieren</b></a>
-				                            </div>
-				                     </div>
-				                </li>
-				            </ul>
-				        </li>
-										
-					</ul>
-					<div class="input-group nav navbar-nav navbar-left searchbar">
-						<form class="navbar-form" role="search">
-								<input type="text" class="search-query form-control" placeholder="Suchen nach..." style="background-color:white" />
-								<span class="input-group-btn">
-									<button class="btn btn-primary" type="button" onclick="javascript:openLink('search.html')">
-										<span class="glyphicon glyphicon-search"></span>
-									</button>
-								</span>
-						</form>		
-					</div>									
-				</div>
-			</div>
-		</nav>
-
-		<div id="content" class="container">
-		<p>&nbsp;</p>
-			<div class="col-sm-2"></div>
-			<div class="col-sm-8">
-				<h2>Nicht das richtige Werkzeug?</h2>
-
-
-
-				<section>
-					<h4>Wir haben <span class="highlight">7 Werkzeuge</span> in deiner Nähe, die du dir ausborgen kannst!</h4>
-
-					<div class="row">
-						<div class="col-sm-12" id="map-col">
-							<img id="map-img" src="img/map.png" />
+										</div>
+									</div>
+								</form>
+							</div>
 						</div>
 					</div>
-				</section>
-				
-				<h3>Du kennst ToolShare noch nicht?</h3>
-				<p>ToolShare ist ein innovatives Netzwerk, das es erlaubt, Werkzeuge an Personen in deiner Nähe zu verleihen, beziehungsweise von Personen in deiner Nähe auszuleihen!</p>
-				
-				<section class="row">
-					<div class="col-sm-6">
-						<h4><img src="img/search.svg"> Für Suchende</h4>
-						<p>Du kannst ToolShare sogar ohne Registrierung nutzen! Gib einfach oben in das Suchfeld einen Suchbegriff zu deinem gewünschten Werkzeug ein (zB Bohrmaschine) und ab geht die Post!</p>
-						<p>Wir empfehlen dir aber trotzdem, dich für ToolShare zu registrieren! Deine Vorteile:</p>
-						<ul>
-							<li>Benachrichtigung wenn ein Werkzeug verfügbar wird</li>
-							<li>eventuell noch weiteres ;)</li>
-						</ul>
-					</div>
-					<div class="col-sm-6">
-						<h4><img src="img/tool.svg"> Für die mit zu vielen Werkzeugen</h4>
-						<p>Du greifst anderen Leuten gerne unter die Arme?</p>
-						<p>Du hast einiges an Werkzeug das die meiste Zeit nicht genutzt wird?</p>
-						<p>Dann bist du bei uns richtig!</p>
-						<p>Melde dich einfach an und füge im <a href="portal.html">Benutzerportal</a> deine Werkzeuge hinzu und so einfach ist es jemanden auszuhelfen, wer weiß vielleicht schlißt sich gleich auch eine neue Bekanntschaft.</p>
-					</div>
-				</section>
+				</div>
 			</div>
-			<div class="col-sm-2"></div>
 		</div>
-		
-		<footer class="footer">
-			<div class="row">
-				<div class="col-sm-2"></div>
-				<dic class="col-sm-8">
-					<div class="col-sm-2">
-						<p class="ueberschrift"><b>Rechtliches</b></p>
-						<p><a href="#">Impressum</a></p>
-						<p><a href="#">AGBs</a>
-						<p><a href="#">Cookie Policy</a>
-					</div>
-					
-					<div class="col-sm-2">
-						<p class="ueberschrift"><b>Hilfe</b></p>
-						<p><a href="#">FAQ</a></p>
-						<p><a href="#">Tutorial</a></p>
-						<p><a href="#">Support</a></p>
-					</div>
-	
-	
-					<div class="col-sm-5 social">
-						<p class="ueberschrift"><b>Folge uns auf</b></p>
-						<p><img src="img/twitter.svg" class="social_logo" onmouseover="load_image(this, 'img/twitter_over.svg')" onmouseout="load_image(this, 'img/twitter.svg')" /> @toolshare</p>
-						<p><img src="img/facebook.svg" class="social_logo" onmouseover="load_image(this, 'img/facebook_over.svg')" onmouseout="load_image(this, 'img/facebook.svg')" /> /ToolShare</p>
-					</div>	
-					
-								
-					<div class="col-sm-3 contact">
-						<p>&copy; 2016 Alle Recht vorbehalten.</p>
-						<p>&nbsp;</p>
-						<p>ToolShare AG.</p>
-						<p>Byggðavegur 38</p>
-						<p>340 Stykkishólmur</p>
-						<p>Island</p>
-						<p>&nbsp;</p>
-						<p>kontakt@toolshare.at</p>
-						<p>+354 482 7837</p>
+	</div>
+	</div>
+	<nav class="navbar navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="javascript:openLink('index.html')"><img id="logo" src="img/logo.svg" /></a>
+				<a class="navbar-brand" href="javascript:openLink('index.html')">ToolShare</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li id="navportal" style="display:none">
+						<a href="javascript:open_portal();" class="nav_link">
+							<span class="glyphicon glyphicon-user"></span> Benutzerportal
+						</a>
+					</li>
+					<li id="navlogout" style="display:none">
+						<a href="javascript:logout()" class="nav_link">
+							<span class="glyphicon glyphicon-log-out"></span> Abmelden
+						</a>
+					</li>
+
+					<li class="dropdown" id="logindropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"> <b>Login</b> <span class="caret"></span></a>
+						<ul id="login-dp" class="dropdown-menu">
+							<li>
+								<div class="row">
+									<div class="col-md-12">
+										<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+											<div class="form-group">
+												<label class="sr-only" for="exampleInputEmail2">Email-Adresse</label>
+												<input type="email" class="form-control" id="exampleInputEmail2" placeholder="E-Mail" required value="tim@taylor.at">
+											</div>
+											<div class="form-group">
+												<label class="sr-only" for="exampleInputPassword2">Passwort</label>
+												<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Passwort" required value="Passwort">
+												<div class="help-block text-right"><a href="javascript:forgot_password();">Passwort vergessen?</a></div>
+											</div>
+											<div class="form-group">
+												<input type="button" class="btn btn-primary btn-block" onclick="javascript:open_login();" value="Einloggen" />
+											</div>
+										</form>
+									</div>
+									<div class="bottom text-center">
+										Noch kein Konto? <a href="javascript:open_signup();"><b>Registrieren</b></a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+
+				</ul>
+				<div class="input-group nav navbar-nav navbar-left searchbar">
+					<form class="navbar-form" role="search">
+						<input type="text" class="search-query form-control" placeholder="Suchen nach..." style="background-color:white" />
+						<span class="input-group-btn">
+									<button class="btn btn-primary" type="button" onclick="javascript:openLink('search.html')">
+										<span class="glyphicon glyphicon-search"></span>
+						</button>
+						</span>
+					</form>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div id="content" class="container">
+		<p>&nbsp;</p>
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+			<h2>Nicht das richtige Werkzeug?</h2>
+
+
+
+			<section>
+				<h4>Wir haben <span class="highlight">7 Werkzeuge</span> in deiner Nähe, die du dir ausborgen kannst!</h4>
+
+				<div class="row">
+					<div class="col-sm-12" id="map-col">
+						<a href="search.html">
+							<img id="map-img" src="img/map.png" />
+						</a>
 					</div>
 				</div>
-				<div class="col-sm-2"></div>
-			</div>
-		</footer>
+			</section>
 
-	</body>
+			<h3>Du kennst ToolShare noch nicht?</h3>
+			<p>ToolShare ist ein innovatives Netzwerk, das es erlaubt, Werkzeuge an Personen in deiner Nähe zu verleihen, beziehungsweise von Personen in deiner Nähe auszuleihen!</p>
+
+			<section class="row">
+				<div class="col-sm-6">
+					<h4><img src="img/search.svg"> Für Suchende</h4>
+					<p>Du kannst ToolShare sogar ohne Registrierung nutzen! Gib einfach oben in das Suchfeld einen Suchbegriff zu deinem gewünschten Werkzeug ein (zB Bohrmaschine) und ab geht die Post!</p>
+					<p>Wir empfehlen dir aber trotzdem, dich für ToolShare zu registrieren! Deine Vorteile:</p>
+					<ul>
+						<li>Benachrichtigung wenn ein Werkzeug verfügbar wird</li>
+						<li>eventuell noch weiteres ;)</li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<h4><img src="img/tool.svg"> Für die mit zu vielen Werkzeugen</h4>
+					<p>Du greifst anderen Leuten gerne unter die Arme?</p>
+					<p>Du hast einiges an Werkzeug das die meiste Zeit nicht genutzt wird?</p>
+					<p>Dann bist du bei uns richtig!</p>
+					<p>Melde dich einfach an und füge im <a href="portal.html">Benutzerportal</a> deine Werkzeuge hinzu und so einfach ist es jemanden auszuhelfen, wer weiß vielleicht schlißt sich gleich auch eine neue Bekanntschaft.</p>
+				</div>
+			</section>
+		</div>
+		<div class="col-sm-2"></div>
+	</div>
+
+	<footer class="footer">
+		<div class="row">
+			<div class="col-sm-2"></div>
+			<dic class="col-sm-8">
+				<div class="col-sm-2">
+					<p class="ueberschrift"><b>Rechtliches</b></p>
+					<p><a href="#">Impressum</a></p>
+					<p><a href="#">AGBs</a>
+						<p><a href="#">Cookie Policy</a>
+				</div>
+
+				<div class="col-sm-2">
+					<p class="ueberschrift"><b>Hilfe</b></p>
+					<p><a href="#">FAQ</a></p>
+					<p><a href="#">Tutorial</a></p>
+					<p><a href="#">Support</a></p>
+				</div>
+
+
+				<div class="col-sm-5 social">
+					<p class="ueberschrift"><b>Folge uns auf</b></p>
+					<p><img src="img/twitter.svg" class="social_logo" onmouseover="load_image(this, 'img/twitter_over.svg')" onmouseout="load_image(this, 'img/twitter.svg')" /> @toolshare</p>
+					<p><img src="img/facebook.svg" class="social_logo" onmouseover="load_image(this, 'img/facebook_over.svg')" onmouseout="load_image(this, 'img/facebook.svg')" /> /ToolShare</p>
+				</div>
+
+
+				<div class="col-sm-3 contact">
+					<p>&copy; 2016 Alle Recht vorbehalten.</p>
+					<p>&nbsp;</p>
+					<p>ToolShare AG.</p>
+					<p>Byggðavegur 38</p>
+					<p>340 Stykkishólmur</p>
+					<p>Island</p>
+					<p>&nbsp;</p>
+					<p>kontakt@toolshare.at</p>
+					<p>+354 482 7837</p>
+				</div>
+		</div>
+		<div class="col-sm-2"></div>
+		</div>
+	</footer>
+
+</body>
+
 </html>
