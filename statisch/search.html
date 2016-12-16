@@ -150,9 +150,49 @@
 				</div>
 			</div>
 		</nav>
-		<div id="content" class="container">
-			<div class="row">
-				<div class="col-sm-9 container">
+		<div id="content" class="container-fluid">
+			<div class="row" id="AAABBB">
+				<div class="col-sm-3 secondary nav-sidebar">
+					<h3>Suchkriterien</h3>
+					<form>
+						<div class="form-group">
+							<label class="control-label" for="inputUmkreis">Umkreis</label>
+					
+							<select id="inputUmkreis" class="form-control">
+								<option>5 km (5)</option>
+								<option>10 km (7)</option>
+								<option>20 km (11)</option>
+								<option>30 km (13)</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="inputAvailiability">Verfügbarkeit</label>
+				
+							<select id="inputAvailiability" class="form-control">
+								<option>Alle (13)</option>
+								<option>Verfügbar (7)</option>
+								<option>Nicht verfügbar (6)</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="inputBrand">Marke</label>
+				
+							<select id="inputBrand" class="form-control">
+								<option>Alle (13)</option>
+								<option>Bosch (5)</option>
+								<option>Dewalt (1)</option>
+								<option>Einhell (2)</option>
+								<option>HILTI (1)</option>
+								<option>Makita (3)</otion>
+								<option>Scheppach (1)</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-default">Kriterien anwenden</button>
+						</div>
+					</form>
+				</div>
+				<div class="col-sm-7 container col-sm-offset-3">
 					<div class="row firstline">
 						<h4><b>13</b> Geräte für "<b>Bohrmaschine</b>" gefunden. <b>7</b> davon in einem Umkreis von maximal 10 Kilometer.</h4>
 					</div>
@@ -274,45 +314,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3 secondary">
-					<h3>Suchkriterien</h3>
-					<form>
-						<div class="form-group">
-							<label class="control-label" for="inputUmkreis">Umkreis</label>
-					
-							<select id="inputUmkreis" class="form-control">
-								<option>5 km (5)</option>
-								<option>10 km (7)</option>
-								<option>20 km (11)</option>
-								<option>30 km (13)</option>
-							</select>
-						</div>
-						<div class="form-group">
-							<label class="control-label" for="inputAvailiability">Verfügbarkeit</label>
-				
-							<select id="inputAvailiability" class="form-control">
-								<option>Alle (13)</option>
-								<option>Verfügbar (7)</option>
-								<option>Nicht verfügbar (6)</option>
-							</select>
-						</div>
-						<div class="form-group">
-							<label class="control-label" for="inputBrand">Marke</label>
-				
-							<select id="inputBrand" class="form-control">
-								<option>Alle (13)</option>
-								<option>Bosch (5)</option>
-								<option>Dewalt (1)</option>
-								<option>Einhell (2)</option>
-								<option>HILTI (1)</option>
-								<option>Makita (3)</otion>
-								<option>Scheppach (1)</option>
-							</select>
-						</div>
-						<div class="form-group">
-							<button type="submit" class="btn btn-default">Kriterien anwenden</button>
-						</div>
-					</form>
+				<div class="col-sm-2 ad-container">
+					<div id="WERBUNG">
+						Hier könnte Ihre Werbung stehen!
+					</div>
 				</div>
 			</div>
 		</div>

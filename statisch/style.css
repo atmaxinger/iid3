@@ -220,13 +220,15 @@ nav .dropdown ul a {
 	position: relative;
 }
 
+#AAABBB {
+	position: relative;
+	height: 100% !important;
+}
+
 .secondary {
-	position: absolute;
-	top:0;
-	bottom: 0;
-	right: 0;
-		
+	min-height: 100% !important;
 	background-color: #eee;
+	position: absolute;
 }
 
 .secondarytext {
@@ -244,7 +246,6 @@ nav .dropdown ul a {
 }
 
 .searchresult {
-	border-top: 1px solid #dbdbdb;
 }
 
 .searchresult {
@@ -260,15 +261,6 @@ nav .dropdown ul a {
 	background-color: #fafafa;
 
 }
-/*
-.isavailiable:hover {
-	background-color: rgba(212, 255, 216, 0.47);
-}
-
-.isnotavailiable:hover {
-	background-color: rgba(255, 196, 196, 0.24);
-}*/
-
 
 .searchresult .img-thumbnail {
 	float: left;
@@ -307,9 +299,8 @@ nav .dropdown ul a {
 
 #productimg {
 	margin-top: 20px;
-	float:right;
-	height: 150px;
-	width: 150px;
+
+	width: 100%;
 }
 
 h3 img {
@@ -364,3 +355,24 @@ section h4 {
 	width: 100%;
 }
 
+.ad-container {
+	height: 100%;
+	position: absolute;
+	right: 0;	
+}
+#WERBUNG {
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	background-color: #f1f1f1;
+	border: 5px solid #dbdbdb;
+	padding: 10px;
+}
+
+#irgendwos {
+	text-align: right;
+	
+	margin-top:20px;
+}
