@@ -355,3 +355,12 @@ section h4 {
 	font-size: 12px;
 	color: gray;
 }
+
+#map-col {
+	position: relative;
+}
+
+#map-img {
+	width: 100%;
+}
+
